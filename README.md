@@ -34,4 +34,4 @@ int main(void)
 	printf("%f\n",j);
 	printf("%f\n",k);
 }
-~~~c
+~~~
