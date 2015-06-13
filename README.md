@@ -1,3 +1,42 @@
+#20510613 Score judge sourcecode
+~~~c
+#include <stdio.h>
+
+// math >90 AND english > 85
+
+int handan(int,int);//0 is OK , 1 is fail.
+
+int handan(int math,int english)
+{
+    if(math > 90 && english >85)
+    {
+        return 0;
+    }
+    else
+    {
+        return 1;
+    }
+}
+
+int main()
+{
+    int m,e;
+    printf("please input math score:");
+    scanf("%d",&m);
+    printf("please input english score:");
+    scanf("%d",&e);
+    if (handan(m,e) == 0)
+    {
+        printf("You are a good student!\n");
+    }
+    else
+    {
+        printf("I am sorry!\n");
+    }
+    return 0;
+}
+~~~
+
 #20510606 C Source Code
 ~~~c
 #include <stdio.h>
