@@ -1,3 +1,31 @@
+#20150619 Bubsort
+~~~c
+#include <stdio.h>
+
+int main()
+{
+   int i,j,z,p;
+   int x[]= {9,5,3,8,6,1};
+
+    for(i=5;i>0;i--)
+     {
+        for(j=0;j<i;j++)
+          {
+            if(x[j]>x[j+1])
+               {
+                z=x[j];
+                x[j]=x[j+1];
+                x[j+1]=z;
+               }
+          }
+     }
+   for(p=0;p<6;p++)
+    {
+        printf("%d",x[p]); 
+    }
+}
+~~~
+
 #20510613 Score judge sourcecode
 ~~~c
 #include <stdio.h>
