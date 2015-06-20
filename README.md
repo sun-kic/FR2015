@@ -1,3 +1,40 @@
+#20150620 selection sort 
+~~~c
+#include <stdio.h>
+
+void selsort(int x[],int n);
+
+void selsort(int x[],int n)
+{
+    int i,j,z,k;
+    for(i=0;i<n-1;i++)
+     {
+	  k = i; 
+        for(j=i+1;j<n;j++)
+          {
+            if(x[k]>x[j])
+               {
+		   k = j;
+               }
+          }
+	  z = x[i];
+	  x[i] = x[k];
+	  x[k] = z;
+     }
+}
+
+int main()
+{
+   int p;
+   int x[]= {9,7,5,12,3,2,8,4,6,1};
+   selsort(x,10);
+   for(p=0;p<10;p++)
+    {
+        printf("%d,",x[p]); 
+    }
+}
+~~~
+
 #20150620 Bubsort fuction
 ~~~c
 #include <stdio.h>
