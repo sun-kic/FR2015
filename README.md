@@ -1,3 +1,44 @@
+#20150620 Bubsort fuction
+~~~c
+#include <stdio.h>
+
+void bubsort(int x[],int n);
+
+void bubsort(int x[],int n)
+{
+    int i,j,z,flag;
+    for(i=n-1;i>0;i--)
+     {
+        flag = 0;
+        for(j=0;j<i;j++)
+          {
+            if(x[j]>x[j+1])
+               {
+                z=x[j];
+                x[j]=x[j+1];
+                x[j+1]=z;
+                flag = 1;
+               }
+          }
+        if(flag == 0)
+          {
+            break;
+          }
+     }
+}
+
+int main()
+{
+   int p;
+   int x[]= {9,5,3,8,6,1};
+   bubsort(x,6);
+   for(p=0;p<6;p++)
+    {
+        printf("%d",x[p]); 
+    }
+}
+~~~
+
 #20150619 Bubsort
 ~~~c
 #include <stdio.h>
