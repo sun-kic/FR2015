@@ -1,3 +1,37 @@
+#20150627 基本挿入法
+~~~c
+#include <stdio.h>
+
+int main()
+{
+  int i,j,n,temp;
+  int t[] = {4,9,1,7,3,2,6};
+  for(i=1;i<7;i++)
+  {
+	j=i-1;
+	while(j>=0)
+	{
+      if(t[j]>t[j+1])
+	  {
+		temp=t[j];
+		t[j]=t[j+1];
+		t[j+1]=temp;
+		j=j-1;
+	  }
+	  else
+	  {
+		j = -1;
+	  }
+	}
+  }
+  for(n=0;n<7;n++)
+  {
+	printf("%d,",t[n]);
+  }
+  
+}
+~~~
+
 #20150620 selection sort 
 ~~~c
 #include <stdio.h>
