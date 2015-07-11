@@ -1,3 +1,32 @@
+#20150711 関数の使い方
+~~~c
+#include <stdio.h>
+int sum(int begin,int end);/*beginからendまでの合計を求める*/
+
+int main()
+{
+	/*1~10までの合計を計算する、そして、21~40までの合計*/
+	/*を計算し、２つの合計値を足す,35~58までの合計を足す*/
+	int sum1 = sum(1,10)+sum(21,40)+sum(35,58);
+	printf("%d\n",sum1);
+	
+	return 0;
+}
+
+int sum(int begin,int end)
+{
+	int i;
+	int sum=0;
+	for (i=begin;i<=end;i++)
+	{
+		sum = sum + i;
+	}
+	return sum;
+}
+
+
+~~~
+
 #20150627 基本挿入法
 ~~~c
 #include <stdio.h>
